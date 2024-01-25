@@ -103,7 +103,8 @@ body {
 
     margin-bottom:1px;
     font-size:20px;
-    width:100%;
+    max-width:100%;
+    padding: 1px 1px;
 }
 
 #water:hover {
