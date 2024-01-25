@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+        <head>
+                <title>CLICKER GAME</title>
+                <link rel="stylesheet" href="1.CSS">
+                <script src="1.JS" defer></script>
+        </head>
+
+        <body>
+
+            <div class="Gra">
+
+                
+                <div id="lewaStrona">
+                        
+                        <div class="verticalLine"></div>
+
+
+                        <div id="ObecnaIlosc">
+                               <p id="licz1"> Woda : </p> <p id="licz">0</p> 
+                        </div>
+
+                        <div class="container">
+                                <button id="water" onclick="plusOne(woda)"></button>
+                         </div>
+
+                         <p id="nasekunde">Wody za kliknięcie: <span id="persekunda">0</span></p>
+                         <p id="nasekunde1">Wody na sekunde:   <span id="persekunda1">  0</span></p>
+                  </div>
+
+                <div id="prawaStrona">
+                        <p  id='falsz'></p>
+                        <p class="upgradeP">ULEPSZENIA (wody za kliknięcie) </p>
+                        <br>
+                        <div class="divforupgrade">
+                                <button id='remove1'class="upgrade" onclick="upgrade1()">KOSZT: 30 WÓD (+2/click)</button>
+                                <button id='remove2'class="upgrade" onclick="upgrade2()">KOSZT: 60 WÓD (+3/click)</button>
+                                <button id='remove3'class="upgrade" onclick="upgrade3()">KOSZT: 200 WÓD (+4/click)</button>
+                                <button id='remove4'class="upgrade" onclick="upgrade4()">KOSZT: 500 WÓD (+5/click)</button>
+                                <button id='remove5'class="upgrade" onclick="upgrade5()">KOSZT: 1000 WÓD (+10/click)</button>
+                                <button id='remove6'class="upgrade" onclick="upgrade6()">KOSZT: 10000 WÓD (+20/click)</button>
+                        </div>
+                        <p class="upgradeP1">Ulepszenia (na sekunde)</p>
+                        <div class="divforupgradeseconds">   
+                                <button id="remove7" class="upgradeseconds" onclick="upgrade7()">Koszt:500 Wód (+2/sekunda)</button>
+                        
+                        
+                        </div>
+                        
+                </div>
+
+            </div>
+            
+
+
+        
+
+        </body>
+</html>

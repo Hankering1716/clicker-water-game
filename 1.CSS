@@ -1,0 +1,160 @@
+* {
+    margin:0px;
+    padding:0px;
+
+}
+body {
+    background:linear-gradient(to right, red,blue)
+}
+
+.gra {
+    justify-content: center;
+}
+
+
+
+
+#falsz {
+    bottom:5%;
+    background-color: green;
+    position:fixed;
+    left:15%;
+    transform:translateX(-50%);
+    font-size:3vmax;
+}
+
+.upgradeP1 {
+
+
+    
+    left:75%;
+    top:70%;
+    font-size:4vmax;
+}
+
+.upgradeP1 {
+    top:40%;
+ 
+    position:absolute;
+    left:75%;
+    transform:translateX(-50%);
+    font-size:3vmax;
+}
+.upgradeP {
+    top:0;
+ 
+    position:absolute;
+    left:75%;
+    transform:translateX(-50%);
+    font-size:3vmax;
+    
+    
+}
+#water  /* button with water */ {
+    background: linear-gradient(to right, red,blue);
+    background-image: url(Water-removebg-preview.png);
+    position: absolute;
+    background-size: 50%;
+    margin-left:5%;    margin-bottom:40px;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor:pointer;
+    width: 30vmax;
+    height:30vmax;
+    
+
+
+}
+
+.divforupgrade {
+    width:33%;
+    display: flex;
+   flex-direction: column;
+    justify-content: center;
+    
+    margin-left:58%;
+}
+
+.upgradeseconds {
+    background: linear-gradient(to right, red,blue);
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor:pointer;
+    border:none;
+    word-wrap: break-all;
+    margin-left:58%;
+
+    margin-bottom:1px;
+    font-size:20px;
+    width:33%;
+
+    margin-top:10%;
+    position: absolute;
+
+}
+.upgrade {
+    background: linear-gradient(to right, red,blue);
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor:pointer;
+    border:none;
+    word-wrap: break-all;
+
+
+    margin-bottom:1px;
+    font-size:20px;
+    width:100%;
+}
+
+#water:hover {
+    outline:3px solid green;
+}
+
+#ObecnaIlosc    /* <p></p> */ {
+    max-width:400vw;
+}
+
+#licz {
+    display:inline;
+    top: 0; 
+    left: 5; 
+    font-size:5vmax;
+    
+}
+
+#licz1 {
+    display:inline;
+    top: 0; 
+    left: 5; 
+    font-size:5vmax;
+    margin-left:10%;
+    
+}
+.verticalLine {
+    border-left: 4px solid #4b42f5;
+    height: 100%;
+    position:fixed;
+    left:50%;
+    transform:translateX(-50%)
+}
+
+
+#nasekunde {
+    margin-left:5%;
+    font-size:2vmax;
+    display:inline;
+    position:absolute;
+    margin-top:30%;
+    left:0;
+}
+
+
+#nasekunde1 {
+    margin-left:5%;
+    font-size:2vmax;
+    display:inline;
+    position:absolute;
+    margin-top:33%;
+    left:0;
+}
+
