@@ -151,10 +151,10 @@ var falsz = document.getElementById("falsz");
 var nasekunde = 1;
 
 
-const persekunda1 = document.getElementById("persekunda1"); // na sekunde
+var persekunda1 = document.getElementById("persekunda1"); // na sekunde
 
 
-persekunda1.textContent = nasekunde;
+
 
 window.setInterval(
     function sekundowazmiana() {
@@ -162,17 +162,49 @@ window.setInterval(
         licz.textContent = woda;
     },1000);
 
+
 var kosztulepszenianasekunde1 = 500;
+
+
+
 function upgrade7() {
     if(woda>=kosztulepszenianasekunde1) {
-        woda = woda - 500
-        nasekunde += 1;
-        persekunda1.textContent = nasekunde = 2;
+
+        woda = woda - kosztulepszenianasekunde1
+
+        nasekunde += 2;
+        persekunda1.textContent = nasekunde;
         kosztulepszenianasekunde1 += 500;
+        if(nasekunde>=800) {
+            kosztulepszenianasekunde1 += 30000;
+        }
+
         document.getElementById('koszt7').innerHTML = kosztulepszenianasekunde1;
         
     }
     else {
-        document.getElementById('falsz').innerHTML = `Brakuje ci ${500 - woda} wód`
+        document.getElementById('falsz').innerHTML = `Brakuje ci ${kosztulepszenianasekunde1 - woda} wód`
     }
 }
+
+
+var kosztulepszenianasekunde2 = 1000;
+
+function upgrade8() {
+
+    if(woda>=kosztulepszenianasekunde2) {
+        woda = woda - kosztulepszenianasekunde2;
+        nasekunde += 3
+        persekunda1.textContent = nasekunde;
+        kosztulepszenianasekunde2 += 500;
+        if(nasekunde>=500) {
+            kosztulepszenianasekunde1 += 30000;
+        }     document.getElementById('koszt8').innerHTML = kosztulepszenianasekunde2;
+    
+    }
+    else {
+        document.getElementById("falsz").innerHTML = `Brakuje ci ${kosztulepszenianasekunde2 - woda} wód`
+    }
+}
+
+
