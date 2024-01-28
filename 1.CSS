@@ -14,14 +14,7 @@ body {
 
 
 
-#falsz {
-    bottom:5%;
-    background-color: green;
-    position:fixed;
-    left:15%;
-    transform:translateX(-50%);
-    font-size:3vmax;
-}
+
 
 .upgradeP1 {
 
@@ -167,3 +160,38 @@ body {
     left:0;
 }
 
+@keyframes myAnimation{
+    0%{
+      opacity: 1;
+      transform: rotateX(90deg);
+    }
+    50%{
+      opacity: 1;
+      transform: rotateX(0deg);
+    }
+    100%{
+        transform: rotateX(90deg);
+        opacity: 1;
+
+    }
+
+
+  }
+  
+#falsz{
+      animation-iteration-count: infinite;
+      animation-name: myAnimation;
+      animation-duration: 3000ms;
+      animation-fill-mode: forwards;
+  }
+
+
+
+#falsz {
+    bottom:5%;
+    background-color: green;
+    position:fixed;
+    left:15%;
+
+    font-size:3vmax;
+}
