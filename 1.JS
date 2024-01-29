@@ -1,20 +1,20 @@
-
-
-
 let woda = 0;
-
-
-
 var licz = document.getElementById('licz')
 let upgrade = 1;
 
 
+let iloscklickow = 0;
+
+
+let count444 = document.getElementById('countClick'); 
 function plusOne() {
     document.getElementById('falsz').innerHTML = ``;
     woda += upgrade;
     licz.textContent = woda.toString()
-}
 
+    iloscklickow++;
+    count444.textContent = iloscklickow.toString()
+}
 
 
 
@@ -217,17 +217,27 @@ function upgrade8() {
 }
 
 
-var someVarName = "value";
+// localStorage.setItem("forg", plusOne());
 
-console.log(localStorage.setItem("someVarKey", someVarName));
-
-var falsz = document.getElementById("falsz").innerHTML;
+// console.log(localStorage.getItem('forg'))
 
 
 
 
-console.log(localStorage.getItem(nasekunde))
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+  }
+  
 
-// https://codetheweb.blog/javascript-localstorage/
-
-// Let’s try something that combines setItem and getItem. We want to get the value of pageLoadCount, add 1 to it, then save the new value back to localStorage. See if you can work out how we’d do that…
+  window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
