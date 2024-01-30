@@ -5,18 +5,23 @@ let upgrade = 1;
 
 let iloscklickow = 0;
 
+let ilosczdobytychosiagniec = 0;
 
 let count444 = document.getElementById('countClick'); 
+
+
+let countEvery = document.getElementById('countWater');
+
+
 function plusOne() {
     document.getElementById('falsz').innerHTML = ``;
     woda += upgrade;
     licz.textContent = woda.toString()
 
     iloscklickow++;
-    count444.textContent = iloscklickow.toString()
+
+
 }
-
-
 
 
 
@@ -167,6 +172,14 @@ window.setInterval(
     function sekundowazmiana() {
         woda += nasekunde;
         licz.textContent = woda;
+
+        countEvery.textContent = woda;
+
+
+        count444.textContent = iloscklickow.toString()
+
+
+    
     },1000);
 
 
@@ -241,3 +254,4 @@ function myFunction() {
       }
     }
   }
+
