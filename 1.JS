@@ -179,8 +179,8 @@ window.setInterval(
         count444.textContent = iloscklickow.toString()
 
 
-    
     },1000);
+
 
 
 
@@ -245,6 +245,7 @@ function myFunction() {
   window.onclick = function(event) {
     if (!event.target.matches('.dropbtn')) {
       var dropdowns = document.getElementsByClassName("dropdown-content");
+
       var i;
       for (i = 0; i < dropdowns.length; i++) {
         var openDropdown = dropdowns[i];
@@ -255,3 +256,42 @@ function myFunction() {
     }
   }
 
+
+  function mojaFunkcja() {
+    document.getElementById("dropik").classList.toggle("szow");
+  }
+
+  window.onclick = function(event) {
+    if(!event.target.matches('.dropbutton')) {
+        var dropdowns1 = document.getElementById("dropdownik-content");
+        var v;
+
+        
+        
+        for(v = 0; v< dropdowns1.length; v++) {
+            var otwartydropik = dropdowns1[v];
+            if(otwartydropik.classList.contains('szow')) {
+                openDropdown.classList.remove('szow');
+
+            }
+
+        }
+
+
+    }
+  }
+
+
+
+
+
+
+
+
+  if(woda>=100) {
+    zgoda1 = "✅"
+} else {
+    zgoda1 = '❌'
+}
+
+document.getElementById("osiagniecie1").textContent = `Zdobądź 100 wód! ${zgoda1}`;
