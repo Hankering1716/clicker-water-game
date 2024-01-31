@@ -240,3 +240,36 @@ body {
   .show {display: block;}
 
 
+.dropdown1 {
+    position: relative;
+    display: inline-block;
+  }
+  .dropbutton {
+    background-color: brown;
+    max-height: 30px;
+    max-width:70px;
+    min-height: 30px;
+    min-width:70px;
+  }
+
+  .dropdownik-content {
+    display: none;
+    position: absolute;
+
+    min-width: 300px;
+    background-color: black;
+    color:white;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    word-break:wrap;
+
+  }
+  .dropdown1 a:hover {background-color: #ddd;}
+  
+  .szow {display: inline;}
+
+.beforep {
+    width: 10px;
+    height: 10px;
+}
