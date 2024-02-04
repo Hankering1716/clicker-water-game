@@ -17,13 +17,16 @@ function plusOne() {
     document.getElementById('falsz').innerHTML = ``;
     woda += upgrade;
     licz.textContent = woda.toString()
-
     iloscklickow++;
+
+  
 
 
 }
 
-
+setTimeout(() => {
+    let woda1 = woda; 
+}, timeout);
 
 var persekunda = document.getElementById("persekunda"); // na sekunde (klik)
 
@@ -214,59 +217,77 @@ function upgrade8() {
 // console.log(localStorage.getItem('forg'))
 
 
+var css1 =  document.getElementById("dropbtn");
+
 
 
 function myFunction() {
     document.getElementById("myDropdown").classList.toggle("show");
-  }
+    css1.style.backgroundColor = 'green'
+
+    setTimeout(() => {
+        css1.style.backgroundColor = 'brown';
+        css2.style.backgroundColor = 'brown';
+    }, 5000);
+}
   
 
   window.onclick = function(event) {
     if (!event.target.matches('.dropbtn')) {
       var dropdowns = document.getElementsByClassName("dropdown-content");
 
-
       var dropdowns1 = document.getElementById("dropdownik-content")
-      if(dropdowns1.style.display=='block') {
-        dropdowns.style.display = 'none';
-    }
-
       var i;
       for (i = 0; i < dropdowns.length; i++) {
+  
+
         var openDropdown = dropdowns[i];
         if (openDropdown.classList.contains('show')) {
           openDropdown.classList.remove('show');
+
+
+
+
+
         }
       }
     }
   }
 
 
-  
-  function mojaFunkcja() {
-    document.getElementById("dropik").classList.toggle("szow");
-  }
+  var css2 =  document.getElementById("dropbutton");
 
-  window.onclick = function(event) {
+
+
+function mojaFunkcja() {
+    document.getElementById("dropik").classList.toggle("szow");
+
+    css2.style.backgroundColor = 'red';
+
+    setTimeout(() => {
+        css1.style.backgroundColor = 'brown';
+        css2.style.backgroundColor = 'brown';
+    }, 5000);
+
+}
+
+
+
+
+window.onclick = function(event) {
     if(!event.target.matches('.dropbutton')) {
+
         var dropdowns1 = document.getElementById("dropdownik-content");
         var v;
-
-        var dropdowns = document.getElementById("dropdown-content")
-        if(dropdowns.style.display=='block') {
-            dropdowns1.style.display = 'none';
-        }
-
         for(v = 0; v< dropdowns1.length; v++) {
+
             var otwartydropik = dropdowns1[v];
+
+
             if(otwartydropik.classList.contains('szow')) {
                 openDropdown.classList.remove('szow');
-
             }
-
         }
-
-
     }
   }
 
@@ -297,7 +318,7 @@ window.setInterval(
         // osiagniecia część dalsza
 
         if(woda>=100) {
-            document.getElementById("osiagniecie1").textContent =  "Zdobądź 100 wód | " + '✅';
+            document.getElementById("osiagniecie1").textContent =  "1. Zdobądź 100 wód | " + '✅';
 
 
             document.getElementById("osiagniecieInfo1").innerHTML = "Zdobyłeś osiągnięcie nr 1";
@@ -312,7 +333,7 @@ window.setInterval(
         }
         
         if(woda>=500) {
-            document.getElementById("osiagniecie2").textContent = "Zdobądź 500 wód |" + "✅";
+            document.getElementById("osiagniecie2").textContent = "2. Zdobądź 500 wód |" + "✅";
 
             document.getElementById("osiagniecieInfo2").innerHTML = "Zdobyłeś osiągnięcie nr 2";
 
@@ -324,7 +345,7 @@ window.setInterval(
         
 
         if(iloscklickow>100) {
-            document.getElementById("osiagniecie3").textContent = "Kliknij 100 razy wodę |" + "✅";
+            document.getElementById("osiagniecie3").textContent = "3. Kliknij 100 razy wodę |" + "✅";
             document.getElementById("osiagniecieInfo3").innerHTML = "Zdobyłeś osiągnięcie nr 3";
 
             setTimeout(() => {
@@ -338,3 +359,12 @@ window.setInterval(
 
 //  ogarnac ciastka i zapisywac wode po refreshu
 
+
+let woda1 = licz;
+
+
+var wody = woda1;
+
+localStorage.setItem("SomeVarKey",wody)
+
+console.log(localStorage.getItem("SomeVarKey"))
