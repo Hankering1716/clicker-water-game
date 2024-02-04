@@ -24,9 +24,7 @@ function plusOne() {
 
 }
 
-setTimeout(() => {
-    let woda1 = woda; 
-}, timeout);
+
 
 var persekunda = document.getElementById("persekunda"); // na sekunde (klik)
 
@@ -360,11 +358,3 @@ window.setInterval(
 //  ogarnac ciastka i zapisywac wode po refreshu
 
 
-let woda1 = licz;
-
-
-var wody = woda1;
-
-localStorage.setItem("SomeVarKey",wody)
-
-console.log(localStorage.getItem("SomeVarKey"))
