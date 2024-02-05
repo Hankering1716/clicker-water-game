@@ -1,4 +1,7 @@
 let woda = 0;
+let wodaCookie = localStorage.getItem("Wody1");
+console.log(wodaCookie)
+
 var licz = document.getElementById('licz')
 let upgrade = 1;
 
@@ -12,16 +15,14 @@ let count444 = document.getElementById('countClick');
 
 let countEvery = document.getElementById('countWater');
 
-
+let woda1;
 function plusOne() {
     document.getElementById('falsz').innerHTML = ``;
     woda += upgrade;
+
     licz.textContent = woda.toString()
     iloscklickow++;
-
-  
-
-
+    
 }
 
 
@@ -313,6 +314,12 @@ window.setInterval(
 
         count444.textContent = iloscklickow.toString()
 
+
+        //ciasteczka
+
+        localStorage.setItem("Wody1", woda)
+
+
         // osiagniecia część dalsza
 
         if(woda>=100) {
@@ -342,10 +349,15 @@ window.setInterval(
         }
         
 
+        
+
+
+
+
         if(iloscklickow>100) {
             document.getElementById("osiagniecie3").textContent = "3. Kliknij 100 razy wodę |" + "✅";
             document.getElementById("osiagniecieInfo3").innerHTML = "Zdobyłeś osiągnięcie nr 3";
-
+            
             setTimeout(() => {
                 document.getElementById("osiagniecieInfo3").style.display = 'none'
 
@@ -356,5 +368,4 @@ window.setInterval(
 
 
 //  ogarnac ciastka i zapisywac wode po refreshu
-
 
