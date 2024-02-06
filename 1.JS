@@ -1,10 +1,7 @@
-let woda = 0;
-let wodaCookie = localStorage.getItem("Wody1");
-console.log(wodaCookie)
 
 var licz = document.getElementById('licz')
-let upgrade = 1;
 
+let upgrade = 1;
 
 let iloscklickow = 0;
 
@@ -12,25 +9,26 @@ let ilosczdobytychosiagniec = 0;
 
 let count444 = document.getElementById('countClick'); 
 
-
 let countEvery = document.getElementById('countWater');
 
 let woda1;
+
 function plusOne() {
     document.getElementById('falsz').innerHTML = ``;
+    
     woda += upgrade;
 
-    licz.textContent = woda.toString()
+    licz.textContent = Number(woda);
+
     iloscklickow++;
     
 }
 
 
-
 var persekunda = document.getElementById("persekunda"); // na sekunde (klik)
 
-
 var punktydozdobycia1 = 30;
+
 function upgrade1() {
     if(woda>=punktydozdobycia1) {
 
@@ -53,6 +51,7 @@ function upgrade1() {
 }
 
 var punktydozdobycia2 = 60;
+
 function upgrade2() {
     if(woda>=punktydozdobycia2) {
         woda = woda - punktydozdobycia2;
@@ -173,7 +172,7 @@ function upgrade7() {
     if(woda>=kosztulepszenianasekunde1) {
 
         woda = woda - kosztulepszenianasekunde1
-
+        
         nasekunde += 2;
         persekunda1.textContent = nasekunde;
         kosztulepszenianasekunde1 += 500;
@@ -272,7 +271,6 @@ function mojaFunkcja() {
 
 
 
-
 window.onclick = function(event) {
     if(!event.target.matches('.dropbutton')) {
 
@@ -305,19 +303,27 @@ document.getElementById("osiagniecie3").textContent = "3. Kliknij 100 razy wodę
 window.setInterval(
     function sekundowazmiana() {
 
+ 
+
+
         // nasekunde + (zmienna)
         woda += nasekunde;
+
+
         licz.textContent = woda;
 
+
         countEvery.textContent = woda;
+
 
 
         count444.textContent = iloscklickow.toString()
 
 
-        //ciasteczka
 
-        localStorage.setItem("Wody1", woda)
+            // ciasteczka 
+
+            localStorage.setItem("wodyZapisCookie", woda);
 
 
         // osiagniecia część dalsza
@@ -369,3 +375,21 @@ window.setInterval(
 
 //  ogarnac ciastka i zapisywac wode po refreshu
 
+
+function increaseWater(nasekunde) {
+    
+    
+
+    woda += nasekunde;
+
+    localStorage.setItem('water', woda=0);
+}
+
+  setTimeout(() => {
+
+    increaseWater(nasekunde);
+    licz.textContent = woda;
+  }, 1);
+
+
+woda = parseInt(localStorage.getItem('wodyZapisCookie') || localStorage.getItem("water"));
