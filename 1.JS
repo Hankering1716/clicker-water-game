@@ -1,3 +1,5 @@
+let woda;
+
 
 var licz = document.getElementById('licz')
 
@@ -324,6 +326,7 @@ window.setInterval(
             // ciasteczka 
 
             localStorage.setItem("wodyZapisCookie", woda);
+            localStorage.setItem("nasekunde",nasekunde)
 
 
         // osiagniecia część dalsza
@@ -374,22 +377,33 @@ window.setInterval(
 
 
 //  ogarnac ciastka i zapisywac wode po refreshu
-
-
+woda = 0;
 function increaseWater(nasekunde) {
     
-    
+
 
     woda += nasekunde;
 
-    localStorage.setItem('water', woda=0);
+    localStorage.setItem('water', woda);
+
+    if(woda==NaN) {
+        return woda = 0;
+    } else {
+        return woda = parseInt(localStorage.getItem('wodyZapisCookie') || woda);
+    }
 }
 
+
+function zwiekszeniaCiaskta() {
+    return nasekunde = parsInt(localStorage.getItem("nasekunde") || nasekunde)
+}
   setTimeout(() => {
 
     increaseWater(nasekunde);
     licz.textContent = woda;
+
+
+
   }, 1);
 
 
-woda = parseInt(localStorage.getItem('wodyZapisCookie') || localStorage.getItem("water"));
